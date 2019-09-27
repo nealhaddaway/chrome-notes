@@ -28,13 +28,17 @@ Use Chrome Notes as an extra clipboard, or to speak some text out-loud.
 * Chrome Notes remembers its last size for you next time
 
 V.1.0.5
-Icons from material.io/icons/
+
+Icons from [material.io/icons](https://material.io/icons)
 
 <hr>
 
 RGB Studios
+
 rgbstudios.org
+
 facebook.com/rgbstudios.org
+
 support@rgbstudios.org
 
 <hr>
