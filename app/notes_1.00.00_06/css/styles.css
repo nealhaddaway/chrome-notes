@@ -1,0 +1,55 @@
+body {
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+} p, #notes {
+	font-family: Roboto, Arial;
+} h3 {
+	font-size: 16px;
+	display: inline;
+} p {
+	font-size: 100%;
+	display: inline;
+} a {
+	text-decoration: none;
+} h3:hover, p:hover {
+	cursor: default;
+} #notes {
+	min-width: 100px;
+	min-height: 100px;
+	width: 240px;
+	height: 240px;
+	max-width: 450px;
+	max-height: 450px;
+	outline: 0px !important;
+	caret-color: #f90;
+} #appIcon {
+	width: 32px;
+} #rgbLogo {
+	width: 48px;
+} .icon {
+	border-radius: 50%;
+	padding: 6px;
+} .icon:hover {
+	cursor: pointer;
+} h3, p, .icon, img, details {
+	user-select: none;
+} hr {
+	border: 1px dashed #666;
+} kbd {
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	display: inline-block;
+} ul {
+	text-align: left;
+	padding-left: 20px;
+} #menuIcon {
+	left: 0;
+	text-align: left;
+	position: absolute;
+} .modal-content p {
+	line-height: 25px;
+} #info-modal .modal-content {
+	text-align: center !important;
+}
