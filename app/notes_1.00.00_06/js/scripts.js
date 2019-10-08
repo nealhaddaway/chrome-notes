@@ -1,8 +1,21 @@
 /*TODO:
-print
 
+Bugs:
+Fix spellcheck not updating display:
+https://stackoverflow.com/questions/58278213/javascript-changing-spellcheck-attribute-doesnt-update-display
+
+Misc:
+make todo seperate file, make file listing changes in this version
 remember caret position? (pick up where you left off)
-spellcheck checkbox/toggle button for spellcheck property of #notes
+print button
+icon animation
+fill color of pencil lead to 666 (prev 333)
+
+Settings Modal:
+move night, spellcheck options
+manually enter notepad size? colors?
+turn off pencil animation
+
 
 Formatting:
 bold, italic, underline formatting?
@@ -10,13 +23,8 @@ could use contenteditable for this stuff, but makes other stuff a pain.
 https://medium.com/content-uneditable/contenteditable-the-good-the-bad-and-the-ugly-261a38555e9c
 also resize attribute doesn't work, need specific font, saving stuff
 
-Misc:
-make todo seperate file
-transitions for modal, colors, menu
-multiple notes? add menu. search names of notes, etc
-envelope icon for email?
-settings modal? move night over there? manually enter notepad size? colors?
-Uglify/Minify/Obscure before publish in store?
+Maybe:
+Uglify/Minify/Obscure before publish in store? prod vs dev
 
 Multiple Notes:
 need side menu where you can view all notes
@@ -31,6 +39,7 @@ delete all notes option
 default open most recent note?
 max notes? 1000?
 time stored in mills: new Date().getTime()
+transitions for modal, colors, menu
 
 COLORS:
 f36 pink
@@ -49,8 +58,15 @@ window.onload = ()=> {
 		if(localStorage)
 			localStorage.setItem("noteData", notes.value);
 	}
+
+	// notes.onfocusin = ()=> {
+	// 	document.getElementById("appIcon").style.transform = "scaleX(1)";
+	// }
+	// notes.onfocusout = ()=> {
+	// 	document.getElementById("appIcon").style.transform = "scaleX(-1)";
+	// }
 	
-	let iconNames = ["cut", "copy", "paste", "select-all", "delete", "save", "undo", "redo", "speak", "open-as-window", "night-mode", "help", "info", "keyboard", "rate"];
+	let iconNames = ["cut", "copy", "paste", "select-all", "delete", "save", "undo", "redo", "speak", "night-mode", "spellcheck", "help", "info", "keyboard", "open-as-window", "rate"];
 	for(let i = 0; i < iconNames.length; i++) {
 		let icon = document.createElement("img");
 		icon.src = "img/icon/" + iconNames[i] + ".svg";
@@ -66,7 +82,7 @@ window.onload = ()=> {
 		}
 		iconDiv.appendChild(icon);
 
-		if(iconNames[i] == "night-mode") {
+		if(iconNames[i] == "spellcheck") {
 			iconDiv.appendChild(document.createElement("hr") );
 		}
 	}
@@ -143,21 +159,38 @@ window.onload = ()=> {
 			localStorage.setItem("nightData", "false");
 		}
 	}
-
+	document.getElementById("spellcheck").onclick = ()=> {
+		notes.focus();
+		if(notes.spellcheck) {
+			notes.spellcheck = false;
+			localStorage.setItem("spellcheck", "false");
+			document.getElementById("spellcheck").classList.remove("active");
+		} else {
+			notes.spellcheck = true;
+			localStorage.setItem("spellcheck", "true");
+			document.getElementById("spellcheck").classList.add("active");
+		}
+	}
 	document.getElementById("rate").onclick = ()=> {
 		window.open("https://chrome.google.com/webstore/detail/lnfempckkegmaeleniojhjplemmebgfi");
 	}
 	
 	if(localStorage) {
+		// load note
 		notes.value = localStorage.getItem("noteData");
-		if(localStorage.getItem("nightData") == "true" && 
-			document.getElementById("night-mode") != null) {
+		// load night
+		if(localStorage.getItem("nightData") == "true") {
 			theme.href = "css/night.css";
-			localStorage.setItem("nightData", "true");
 		}
-
+		// load spellcheck
+		if(localStorage.getItem("spellcheck") == "true") {
+			notes.spellcheck = true;
+			document.getElementById("spellcheck").classList.add("active");
+		}
+		// load size
 		notes.style.width = localStorage.getItem("noteWidth") + "px";
 		notes.style.height = localStorage.getItem("noteHeight") + "px";
+
 	}
 	
 	document.onkeydown = (e)=> {

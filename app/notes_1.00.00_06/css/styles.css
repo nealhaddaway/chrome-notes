@@ -24,7 +24,7 @@ body {
 	outline: 0px !important;
 	caret-color: #f90;
 } #appIcon {
-	width: 32px;
+	width: 32px; /* icon width */
 } #rgbLogo {
 	width: 48px;
 } .icon {
@@ -52,4 +52,6 @@ body {
 	line-height: 25px;
 } #info-modal .modal-content {
 	text-align: center !important;
+} .icon.active {
+	background-color: #f69;
 }

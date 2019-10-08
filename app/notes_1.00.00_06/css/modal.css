@@ -1,5 +1,4 @@
-/* modal background */
-.modal {
+.modal { /* background */
 	display: none; /* hide by default */
 	position: fixed;
 	z-index: 1;
@@ -10,20 +9,13 @@
 	overflow: auto;
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
+} .modal-content {
 	margin: 15% auto; /* 15% from the top and centered */
 	padding: 10px;
 	border: 2px solid #666;
 	width: 90%;
 	position: relative;
-}
-.modal-content h3 {
-	padding-top: 20px;
-}
-
-.close {
+} .close {
 	position: absolute;
 	top: 2px;
 	right: 2px;
