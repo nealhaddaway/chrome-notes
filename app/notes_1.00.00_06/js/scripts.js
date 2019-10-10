@@ -1,15 +1,25 @@
-/*TODO:
+/*
+
+(c) Justin Golden 2019
+
+TODO:
 
 Bugs:
 Fix spellcheck not updating display:
 https://stackoverflow.com/questions/58278213/javascript-changing-spellcheck-attribute-doesnt-update-display
 
+Before launch:
+icon animation off option
+new icon?
+minify.
+fix spellcheck
+
 Misc:
 make todo seperate file, make file listing changes in this version
 remember caret position? (pick up where you left off)
 print button
-icon animation
-fill color of pencil lead to 666 (prev 333)
+use new icon
+use new promo images and screenshot in git readme
 
 Settings Modal:
 move night, spellcheck options
@@ -163,6 +173,12 @@ window.onload = ()=> {
 		notes.focus();
 		if(notes.spellcheck) {
 			notes.spellcheck = false;
+
+			// force update
+			let tmp = notes.value;
+			notes.value = "";
+			notes.value = tmp;
+
 			localStorage.setItem("spellcheck", "false");
 			document.getElementById("spellcheck").classList.remove("active");
 		} else {
