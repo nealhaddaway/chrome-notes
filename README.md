@@ -61,3 +61,9 @@ https://github.com/justingolden21
 https://justingolden21.github.io
 
 <a href="mailto:justingolden@rgbstudios.org">justingolden@rgbstudios.org</a>
+
+<hr>
+
+### TODO
+
+- Click speak button again to cancel speaking.
