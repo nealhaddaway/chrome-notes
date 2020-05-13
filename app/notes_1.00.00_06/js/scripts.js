@@ -79,7 +79,7 @@ window.onload = ()=> {
 		document.execCommand("redo");
 	}
 	document.getElementById("speak").onclick = ()=> {
-		if(!window.isSpeaking) {		
+		if(!window.isSpeaking) {
 			notes.focus();
 			let synth = window.speechSynthesis;
 			let msg = new SpeechSynthesisUtterance(window.getSelection().toString() );
@@ -105,8 +105,13 @@ window.onload = ()=> {
 	document.getElementById("open-as-window").onclick = ()=> {
 		notes.focus();
 		chrome.windows.create(
-			{'url': 'index.html', 'type': 'popup', 'width': 300, 'height': 300}, 
-			(window)=>{}
+			{
+				url: 'index.html',
+				type: 'popup',
+				width: window.outerWidth,
+				height: window.outerHeight
+			}, 
+			(window)=> {}
 		);
 	}
 	document.getElementById("night-mode").onclick = ()=> {
