@@ -9,7 +9,7 @@ body {
 	display: inline;
 } p {
 	font-size: 100%;
-	display: inline;
+	/*display: inline;*/
 } a {
 	text-decoration: none;
 } h3:hover, p:hover {
@@ -50,8 +50,8 @@ body {
 	position: absolute;
 } .modal-content p {
 	line-height: 25px;
-} #info-modal .modal-content {
-	text-align: center !important;
+} #help-modal .modal-content {
+	text-align: left;
 } .icon.active {
 	background-color: #f69;
 }

@@ -44,6 +44,7 @@ manually enter notepad size? colors?
 turn off pencil animation
 delete btn with nothing selected (deletes character, or deletes all)
 speak btn with nothing selected (speaks nothing or speaks all)
+numeric inputs to manually type notepad width and height
 
 ========
 Formatting
