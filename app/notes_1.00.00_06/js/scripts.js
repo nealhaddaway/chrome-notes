@@ -36,7 +36,7 @@ window.onload = ()=> {
 	document.getElementById("select-all").title = "Select All";
 	document.getElementById("open-as-window").title = "Open in New Window";
 	document.getElementById("night-mode").title = "Night Mode";
-	document.getElementById("rate").title = "Rate or Share";
+	document.getElementById("rate").title = "Rate / Share";
 
 	document.getElementById("version").innerHTML = "Version " + chrome.runtime.getManifest().version;
 	

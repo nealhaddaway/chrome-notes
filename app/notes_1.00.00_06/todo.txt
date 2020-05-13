@@ -17,13 +17,18 @@ added pencil animation, spellcheck, updated keyboard info, added rate/share btn
 updated to speech icons, added ability to cancel text-to-speech
 
 ========
+Note
+========
+Tooltips using css :after and attr(title) do not work on images.
+
+========
 Misc
 ========
 remember caret position? (pick up where you left off)
 print button
 use new app icon
 use new promo images and screenshot in git readme
-add popper or make popover titles by hand
+add popper or make tooltips titles by hand
 
 ========
 Speech
@@ -37,6 +42,8 @@ Settings Modal
 move night, spellcheck options
 manually enter notepad size? colors?
 turn off pencil animation
+delete btn with nothing selected (deletes character, or deletes all)
+speak btn with nothing selected (speaks nothing or speaks all)
 
 ========
 Formatting
