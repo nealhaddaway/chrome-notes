@@ -62,6 +62,7 @@ Maybe
 Uglify/Minify/Obscure before publish in store? prod vs dev
 Update save icon to download icon, update star icon to share icon
 add date to downloaded file name, add copyright in info
+add a loading or check icon next to top that shows saving or saved (like google docs)
 
 ========
 Multiple Notes

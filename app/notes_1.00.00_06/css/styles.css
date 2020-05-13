@@ -7,9 +7,9 @@ body {
 } h3 {
 	font-size: 16px;
 	display: inline;
+	letter-spacing: 1px;
 } p {
 	font-size: 100%;
-	/*display: inline;*/
 } a {
 	text-decoration: none;
 } h3:hover, p:hover {
@@ -24,7 +24,7 @@ body {
 	outline: 0px !important;
 	caret-color: #f90;
 } #appIcon {
-	width: 32px; /* icon width */
+	width: 32px; /* icon width, used in animation.css */
 } #rgbLogo {
 	width: 48px;
 } .icon {

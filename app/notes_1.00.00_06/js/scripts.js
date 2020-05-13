@@ -37,6 +37,7 @@ window.onload = ()=> {
 	document.getElementById("open-as-window").title = "Open in New Window";
 	document.getElementById("night-mode").title = "Night Mode";
 	document.getElementById("rate").title = "Rate / Share";
+	document.getElementById("save").title = "Download Notes as Text File";
 
 	document.getElementById("version").innerHTML = "Version " + chrome.runtime.getManifest().version;
 	
