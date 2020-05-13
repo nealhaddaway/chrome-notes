@@ -44,9 +44,9 @@ Icons from [material.io/icons](https://material.io/icons), vector art from [undr
 
 RGB Studios
 
-rgbstudios.org
+https://rgbstudios.org
 
-facebook.com/rgbstudios.org
+https://facebook.com/rgbstudios.org
 
 support@rgbstudios.org
 
@@ -58,7 +58,7 @@ Justin Golden
 
 https://github.com/justingolden21
 
-https://justingolden21.github.io
+https://justingolden.me
 
 <a href="mailto:justingolden@rgbstudios.org">justingolden@rgbstudios.org</a>
 
@@ -66,4 +66,4 @@ https://justingolden21.github.io
 
 ### TODO
 
-- Click speak button again to cancel speaking.
+- Consider adding a settings menu
