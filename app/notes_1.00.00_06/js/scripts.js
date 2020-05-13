@@ -5,8 +5,7 @@
 TODO:
 
 Bugs:
-Fix spellcheck not updating display:
-https://stackoverflow.com/questions/58278213/javascript-changing-spellcheck-attribute-doesnt-update-display
+none (so far :))
 
 Before launch:
 icon animation off option
@@ -14,12 +13,20 @@ new icon?
 minify.
 fix spellcheck
 
+Changelog:
+added pencil animation, spellcheck, updated keyboard info, added rate/share btn
+updated to speech icons, added ability to cancel text-to-speech
+
 Misc:
 make todo seperate file, make file listing changes in this version
 remember caret position? (pick up where you left off)
 print button
 use new icon
 use new promo images and screenshot in git readme
+
+Speech:
+options for volume, rate, pitch on speech, (option to) speak entire note if nothing selected
+option to display button for paste and speak
 
 Settings Modal:
 move night, spellcheck options
@@ -68,13 +75,6 @@ window.onload = ()=> {
 		if(localStorage)
 			localStorage.setItem("noteData", notes.value);
 	}
-
-	// notes.onfocusin = ()=> {
-	// 	document.getElementById("appIcon").style.transform = "scaleX(1)";
-	// }
-	// notes.onfocusout = ()=> {
-	// 	document.getElementById("appIcon").style.transform = "scaleX(-1)";
-	// }
 	
 	let iconNames = ["cut", "copy", "paste", "select-all", "delete", "save", "undo", "redo", "speak", "night-mode", "spellcheck", "help", "info", "keyboard", "open-as-window", "rate"];
 	for(let i = 0; i < iconNames.length; i++) {
@@ -83,7 +83,6 @@ window.onload = ()=> {
 		icon.id = iconNames[i];
 		icon.className = "icon";
 		icon.title = iconNames[i].substring(0, 1).toUpperCase() + iconNames[i].substring(1); //caps
-		// icon.title = icon.title.replace(/-/g, " ");
 		icon.draggable = false;
 		icon.tabIndex = 0;
 		icon.onkeydown = (evt)=> {
@@ -145,12 +144,28 @@ window.onload = ()=> {
 		document.execCommand("redo");
 	}
 	document.getElementById("speak").onclick = ()=> {
-		notes.focus();
-		let synth = window.speechSynthesis;
-		let msg = new SpeechSynthesisUtterance(window.getSelection().toString() );
-		msg.rate = 1;
-		msg.pitch = 1;
-		synth.speak(msg);
+		if(!window.isSpeaking) {		
+			notes.focus();
+			let synth = window.speechSynthesis;
+			let msg = new SpeechSynthesisUtterance(window.getSelection().toString() );
+			msg.rate = 1;
+			msg.pitch = 1;
+			synth.speak(msg);
+
+			document.getElementById("speak").src = "img/icon/speak-cancel.svg";
+			document.getElementById("speak").title = "Cancel Text Speech";
+			window.isSpeaking = true;
+
+			msg.onend = (evt)=> {
+				document.getElementById("speak").src = "img/icon/speak.svg";
+				document.getElementById("speak").title = "Speak Selected Text";
+				window.isSpeaking = false;
+				console.log('message ended');
+			}
+		} else {
+			window.speechSynthesis.cancel();
+			// msg.onend event fires
+		}		
 	}
 	document.getElementById("open-as-window").onclick = ()=> {
 		notes.focus();
@@ -173,12 +188,6 @@ window.onload = ()=> {
 		notes.focus();
 		if(notes.spellcheck) {
 			notes.spellcheck = false;
-
-			// force update
-			let tmp = notes.value;
-			notes.value = "";
-			notes.value = tmp;
-
 			localStorage.setItem("spellcheck", "false");
 			document.getElementById("spellcheck").classList.remove("active");
 		} else {
@@ -186,6 +195,10 @@ window.onload = ()=> {
 			localStorage.setItem("spellcheck", "true");
 			document.getElementById("spellcheck").classList.add("active");
 		}
+		// force update
+		let tmp = notes.value;
+		notes.value = "";
+		notes.value = tmp;
 	}
 	document.getElementById("rate").onclick = ()=> {
 		window.open("https://chrome.google.com/webstore/detail/lnfempckkegmaeleniojhjplemmebgfi");
@@ -206,7 +219,6 @@ window.onload = ()=> {
 		// load size
 		notes.style.width = localStorage.getItem("noteWidth") + "px";
 		notes.style.height = localStorage.getItem("noteHeight") + "px";
-
 	}
 	
 	document.onkeydown = (e)=> {
@@ -225,11 +237,10 @@ window.onload = ()=> {
 	document.onmouseup = storeSize;
 
 	// Modals
-
 	document.getElementById("keyboard").title = "Keyboard Shortcuts";
 	setupModal("help", "help-modal");
 	setupModal("info", "info-modal");
-	setupModal("keyboard", "keyboard-modal");	
+	setupModal("keyboard", "keyboard-modal");
 }
 
 function storeSize() {
