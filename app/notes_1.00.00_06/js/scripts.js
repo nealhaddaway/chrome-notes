@@ -82,7 +82,8 @@ window.onload = ()=> {
 		if(!window.isSpeaking) {
 			notes.focus();
 			let synth = window.speechSynthesis;
-			let msg = new SpeechSynthesisUtterance(window.getSelection().toString() );
+			let txt = window.getSelection().toString() || notes.value;
+			let msg = new SpeechSynthesisUtterance(txt);
 			msg.rate = 1;
 			msg.pitch = 1;
 			synth.speak(msg);

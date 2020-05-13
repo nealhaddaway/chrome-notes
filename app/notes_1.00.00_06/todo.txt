@@ -60,6 +60,8 @@ also resize attribute doesn't work, need specific font, saving stuff
 Maybe
 ========
 Uglify/Minify/Obscure before publish in store? prod vs dev
+Update save icon to download icon, update star icon to share icon
+add date to downloaded file name, add copyright in info
 
 ========
 Multiple Notes
