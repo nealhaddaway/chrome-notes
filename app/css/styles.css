@@ -2,19 +2,27 @@ body {
 	text-align: center;
 	margin: 5px;
 	padding: 5px;
-} p, #notes {
+}
+p,
+#notes {
 	font-family: Roboto, Arial;
-} h3 {
+}
+h3 {
 	font-size: 16px;
 	display: inline;
 	letter-spacing: 1px;
-} p {
+}
+p {
 	font-size: 100%;
-} a {
+}
+a {
 	text-decoration: none;
-} h3:hover, p:hover {
+}
+h3:hover,
+p:hover {
 	cursor: default;
-} #notes {
+}
+#notes {
 	min-width: 100px;
 	min-height: 100px;
 	width: 240px;
@@ -23,38 +31,54 @@ body {
 	max-height: 450px;
 	outline: 0px !important;
 	caret-color: #f90;
-} #appIcon {
+}
+#appIcon {
 	width: 32px; /* icon width, used in animation.css */
-} #rgbLogo {
+}
+#rgbLogo {
 	width: 48px;
-} .icon {
+}
+.icon {
 	border-radius: 50%;
 	padding: 8px;
 	margin: 2px;
 	/*transition: 0.2s ease-in-out;*/
-} .icon:hover {
+}
+.icon:hover {
 	cursor: pointer;
 	/*transform: scale(1.1);*/
-} h3, p, .icon, img, details {
+}
+h3,
+p,
+.icon,
+img,
+details {
 	user-select: none;
-} hr {
+}
+hr {
 	border: 1px dashed #666;
-} kbd {
+}
+kbd {
 	border-radius: 5px;
 	padding: 5px;
 	margin: 5px;
 	display: inline-block;
-} ul {
+}
+ul {
 	text-align: left;
 	padding-left: 20px;
-} #menuIcon {
+}
+#menuIcon {
 	left: 0;
 	text-align: left;
 	position: absolute;
-} .modal-content p {
+}
+.modal-content p {
 	line-height: 25px;
-} #help-modal .modal-content {
+}
+#help-modal .modal-content {
 	text-align: left;
-} .icon.active {
+}
+.icon.active {
 	background-color: #f69;
 }

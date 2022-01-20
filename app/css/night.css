@@ -1,33 +1,48 @@
-body, #notes {
+body,
+#notes {
 	background-color: #333;
-} h3 {
+}
+h3 {
 	color: #ccc;
-} p, #keyboard-modal li {
+}
+p,
+#keyboard-modal li {
 	color: #999;
-} a {
+}
+a {
 	color: #f69;
-} a:hover {
+}
+a:hover {
 	color: #f90;
-} #notes:focus {
+}
+#notes:focus {
 	border: 2px solid #ccc;
 	color: #ccc;
-} #notes {
+}
+#notes {
 	color: #999;
 	border: 2px solid #999;
-} .icon:hover {
+}
+.icon:hover {
 	background-color: #f69;
-} .icon:active {
+}
+.icon:active {
 	background-color: #f90;
-} #night-mode {
+}
+#night-mode {
 	background-color: #f69;
-} ::selection {
+}
+::selection {
 	background: #f69;
 	color: #fff;
-} * {
+}
+* {
 	outline-color: #f69;
-} .modal-content {
+}
+.modal-content {
 	background-color: #333;
-} kbd {
+}
+kbd {
 	background-color: #999;
 	color: #333;
 }

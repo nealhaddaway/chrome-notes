@@ -15,19 +15,31 @@
 	width: 1000%;
 	transform: translateX(-45%) scale(0.1);
 
-	background: linear-gradient(45deg, transparent 45%, #f90, transparent 55%), 
-	linear-gradient(-45deg, transparent 45%, #f90, transparent 55%);
+	background: linear-gradient(45deg, transparent 45%, #f90, transparent 55%),
+		linear-gradient(-45deg, transparent 45%, #f90, transparent 55%);
 
 	background-size: 40px 40px;
 }
 
 @-webkit-keyframes rotation {
-	0% { -webkit-transform: rotate(0deg); }
-	50% { -webkit-transform: rotate(-90deg); }
-	100% { -webkit-transform: rotate(0deg); }
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	50% {
+		-webkit-transform: rotate(-90deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+	}
 }
 @-webkit-keyframes growWidth {
-	0% { width: 0px; }
-	50% { width: 32px; } /* icon width */
-	100% { width: 0px; }
+	0% {
+		width: 0px;
+	}
+	50% {
+		width: 32px;
+	} /* icon width */
+	100% {
+		width: 0px;
+	}
 }

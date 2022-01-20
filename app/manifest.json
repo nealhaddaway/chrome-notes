@@ -8,11 +8,7 @@
 		"default_popup": "index.html",
 		"default_title": "Click to start typing..."
 	},
-	"permissions": [
-		"clipboardWrite",
-		"clipboardRead",
-		"downloads"
-	],
+	"permissions": ["clipboardWrite", "clipboardRead", "downloads"],
 	"icons": {
 		"128": "img/128_icon.png",
 		"48": "img/48_icon.png",
