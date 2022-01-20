@@ -17,8 +17,15 @@
 	width: 90%;
 	position: relative;
 }
-.close {
+.modal-content .close {
 	position: absolute;
 	top: 2px;
 	right: 2px;
+}
+.modal-content h3 {
+	margin-left: 4px;
+}
+.modal-icon {
+	width: 18px;
+	height: 18px;
 }
