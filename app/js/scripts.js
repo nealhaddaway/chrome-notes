@@ -27,20 +27,19 @@ window.onload = () => {
 		'open-as-window',
 		'rate',
 	];
-	for (let i = 0; i < iconNames.length; i++) {
+	for (iconName of iconNames) {
 		const icon = document.createElement('img');
-		icon.src = 'img/icon/' + iconNames[i] + '.svg';
+		icon.src = 'img/icon/' + iconName + '.svg';
 		icon.className = 'icon';
 		icon.title =
-			iconNames[i].substring(0, 1).toUpperCase() +
-			iconNames[i].substring(1); //caps
+			iconName.substring(0, 1).toUpperCase() + iconName.substring(1); //caps
 		const btn = document.createElement('button');
 		btn.className = 'icon-btn';
-		btn.id = iconNames[i];
+		btn.id = iconName;
 		btn.appendChild(icon);
 		iconDiv.appendChild(btn);
 
-		if (iconNames[i] == 'spellcheck') {
+		if (iconName == 'spellcheck') {
 			iconDiv.appendChild(document.createElement('hr'));
 		}
 	}
