@@ -33,14 +33,16 @@ window.onload = () => {
 		const icon = document.createElement('img');
 		icon.src = 'img/icon/' + iconName + '.svg';
 		icon.className = 'icon';
+
 		const btn = document.createElement('button');
 		btn.className = 'icon-btn';
 		btn.title = capitalize(iconName);
 		btn.id = iconName;
+
 		btn.appendChild(icon);
 		iconDiv.appendChild(btn);
 
-		if (iconName == 'spellcheck') {
+		if (iconName === 'spellcheck') {
 			iconDiv.appendChild(document.createElement('hr'));
 		}
 	}
@@ -79,7 +81,7 @@ window.onload = () => {
 	};
 	document.getElementById('save').onclick = () => {
 		notes.focus();
-		let file = {
+		const file = {
 			url:
 				'data:application/txt,' +
 				encodeURIComponent(notes.value.replace(/\r?\n/g, '\r\n')),
@@ -98,9 +100,9 @@ window.onload = () => {
 	document.getElementById('speak').onclick = () => {
 		if (!window.isSpeaking) {
 			notes.focus();
-			let synth = window.speechSynthesis;
-			let txt = window.getSelection().toString() || notes.value;
-			let msg = new SpeechSynthesisUtterance(txt);
+			const synth = window.speechSynthesis;
+			const txt = window.getSelection().toString() || notes.value;
+			const msg = new SpeechSynthesisUtterance(txt);
 			msg.rate = 1;
 			msg.pitch = 1;
 			synth.speak(msg);
@@ -110,12 +112,11 @@ window.onload = () => {
 			document.getElementById('speak').title = 'Cancel Text Speech';
 			window.isSpeaking = true;
 
-			msg.onend = (evt) => {
+			msg.onend = () => {
 				document.querySelector('#speak .icon').src =
 					'img/icon/speak.svg';
 				document.getElementById('speak').title = 'Speak Selected Text';
 				window.isSpeaking = false;
-				console.log('message ended');
 			};
 		} else {
 			window.speechSynthesis.cancel();
