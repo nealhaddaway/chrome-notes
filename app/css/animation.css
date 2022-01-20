@@ -15,8 +15,8 @@
 	width: 1000%;
 	transform: translateX(-45%) scale(0.1);
 
-	background: linear-gradient(45deg, transparent 45%, #f90, transparent 55%),
-		linear-gradient(-45deg, transparent 45%, #f90, transparent 55%);
+	background: linear-gradient(45deg, transparent 45%, #666, transparent 55%),
+		linear-gradient(-45deg, transparent 45%, #666, transparent 55%);
 
 	background-size: 40px 40px;
 }
