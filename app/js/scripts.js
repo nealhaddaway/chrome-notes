@@ -33,9 +33,9 @@ window.onload = () => {
 		const icon = document.createElement('img');
 		icon.src = 'img/icon/' + iconName + '.svg';
 		icon.className = 'icon';
-		icon.title = capitalize(iconName);
 		const btn = document.createElement('button');
 		btn.className = 'icon-btn';
+		btn.title = capitalize(iconName);
 		btn.id = iconName;
 		btn.appendChild(icon);
 		iconDiv.appendChild(btn);
@@ -105,12 +105,14 @@ window.onload = () => {
 			msg.pitch = 1;
 			synth.speak(msg);
 
-			document.getElementById('speak').src = 'img/icon/speak-cancel.svg';
+			document.querySelector('#speak .icon').src =
+				'img/icon/speak-cancel.svg';
 			document.getElementById('speak').title = 'Cancel Text Speech';
 			window.isSpeaking = true;
 
 			msg.onend = (evt) => {
-				document.getElementById('speak').src = 'img/icon/speak.svg';
+				document.querySelector('#speak .icon').src =
+					'img/icon/speak.svg';
 				document.getElementById('speak').title = 'Speak Selected Text';
 				window.isSpeaking = false;
 				console.log('message ended');
