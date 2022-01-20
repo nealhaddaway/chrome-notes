@@ -111,3 +111,4 @@ Before Release
 update version number in manifest
 delete todo.txt, then send to zip
 update version number in store listing
+merge dev into master

@@ -44,6 +44,13 @@ kbd {
 	background-color: #999;
 	color: #333;
 }
+nav {
+	background-color: #333;
+}
+.note-preview {
+	color: #999;
+}
+
 #night-mode {
 	background-color: #f69;
 }
