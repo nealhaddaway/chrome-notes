@@ -119,28 +119,22 @@ window.onload = () => {
 				window.isSpeaking = false;
 			};
 		} else {
-			window.speechSynthesis.cancel();
 			// msg.onend event fires
+			window.speechSynthesis.cancel();
 		}
 	};
 	document.getElementById('open-as-window').onclick = () => {
 		notes.focus();
-		chrome.windows.create(
-			{
-				url: 'index.html',
-				type: 'popup',
-				width: window.outerWidth,
-				height: window.outerHeight,
-			},
-			(window) => {}
-		);
+		chrome.windows.create({
+			url: 'index.html',
+			type: 'popup',
+			width: window.outerWidth,
+			height: window.outerHeight,
+		});
 	};
 	document.getElementById('night-mode').onclick = () => {
 		notes.focus();
-		if (
-			theme.href.substring(theme.href.length - 7, theme.href.length) ===
-			'day.css'
-		) {
+		if (theme.href.includes('day.css')) {
 			theme.href = 'css/night.css';
 			localStorage.setItem('nightData', 'true');
 		} else {
@@ -174,11 +168,11 @@ window.onload = () => {
 		// load note
 		notes.value = localStorage.getItem('noteData');
 		// load night
-		if (localStorage.getItem('nightData') == 'true') {
+		if (localStorage.getItem('nightData') === 'true') {
 			theme.href = 'css/night.css';
 		}
 		// load spellcheck
-		if (localStorage.getItem('spellcheck') == 'true') {
+		if (localStorage.getItem('spellcheck') === 'true') {
 			notes.spellcheck = true;
 			document.getElementById('spellcheck').classList.add('active');
 		}
@@ -188,7 +182,7 @@ window.onload = () => {
 	}
 
 	document.onkeydown = (e) => {
-		if (e.keyCode == 78 && notes != document.activeElement) {
+		if (e.key === 'n' && notes != document.activeElement) {
 			//"N" toggles night
 			if (
 				theme.href.substring(
