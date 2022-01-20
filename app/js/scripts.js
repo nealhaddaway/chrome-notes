@@ -183,19 +183,8 @@ window.onload = () => {
 
 	document.onkeydown = (e) => {
 		if (e.key === 'n' && notes != document.activeElement) {
-			//"N" toggles night
-			if (
-				theme.href.substring(
-					theme.href.length - 7,
-					theme.href.length
-				) === 'css/day.css'
-			) {
-				theme.href = 'css/night.css';
-				localStorage.setItem('nightData', 'true');
-			} else {
-				theme.href = 'css/day.css';
-				localStorage.setItem('nightData', 'false');
-			}
+			document.getElementById('night-mode').onclick();
+			notes.blur();
 		}
 		storeSize();
 	};
