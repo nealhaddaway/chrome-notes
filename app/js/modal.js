@@ -1,7 +1,7 @@
 function setupModal(btnName, modalName) {
-	let modal = document.getElementById(modalName);
-	let btn = document.getElementById(btnName);
-	let close = modal.querySelector(' .close');
+	const modal = document.getElementById(modalName);
+	const btn = document.getElementById(btnName);
+	const close = modal.querySelector(' .close');
 
 	btn.onclick = () => {
 		modal.style.display = 'block';

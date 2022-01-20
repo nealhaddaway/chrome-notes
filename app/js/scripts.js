@@ -181,8 +181,8 @@ window.onload = () => {
 		notes.style.height = localStorage.getItem('noteHeight') + 'px';
 	}
 
-	document.onkeydown = (e) => {
-		if (e.key === 'n' && notes != document.activeElement) {
+	document.onkeydown = (evt) => {
+		if (evt.key === 'n' && notes != document.activeElement) {
 			document.getElementById('night-mode').onclick();
 			notes.blur();
 		}
