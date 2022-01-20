@@ -38,9 +38,7 @@ window.onload = () => {
 		icon.draggable = false;
 		icon.tabIndex = 0;
 		icon.onkeydown = (evt) => {
-			if (evt.which == 13)
-				// enter
-				icon.onclick();
+			if (evt.key == 'Enter') icon.onclick();
 		};
 		iconDiv.appendChild(icon);
 

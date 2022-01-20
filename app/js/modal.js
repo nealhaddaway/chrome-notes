@@ -14,8 +14,6 @@ function setupModal(btnName, modalName) {
 	close.tabIndex = 0;
 
 	close.onkeydown = (evt) => {
-		if (evt.which == 13)
-			// enter
-			close.onclick();
+		if (evt.key == 'Enter') close.onclick();
 	};
 }
