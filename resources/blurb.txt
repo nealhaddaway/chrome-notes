@@ -1,10 +1,12 @@
+NEW: You can now have multiple notes!
+
 A simple notes extension, right in your chrome browser! Easily copy around a few words to and from different chrome windows and other apps.
 
 * Ad-free
 * Works offline
 * Very small (less than 0.1mb)
 
-Chrome Notes remembers your notes and mode, even after closing chrome or restarting your computer!
+Chrome Notes remembers your notes and mode, even after closing chrome or restarting your computer! Notes are stored in local storage, so nobody else will ever see them, not us, and not Google.
 
 Use Chrome Notes as an extra clipboard, or to speak some text out-loud.
 
@@ -16,10 +18,11 @@ Features:
 * Open in new window
 * Speak selected text outloud
 * Chrome Notes remembers its last size for you next time
+* Store multiple notes, and quickly create, edit, share, or delete
 
 Chrome Notes is the smart, simple notepad built for you :)
 
-V.1.0.5
+V.1.0.8
 Icons from material.io/icons/
 
 RGB Studios
