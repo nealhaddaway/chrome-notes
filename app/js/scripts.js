@@ -27,12 +27,13 @@ window.onload = () => {
 		'open-as-window',
 		'rate',
 	];
+	const capitalize = (str) =>
+		str.substring(0, 1).toUpperCase() + str.substring(1);
 	for (iconName of iconNames) {
 		const icon = document.createElement('img');
 		icon.src = 'img/icon/' + iconName + '.svg';
 		icon.className = 'icon';
-		icon.title =
-			iconName.substring(0, 1).toUpperCase() + iconName.substring(1); //caps
+		icon.title = capitalize(iconName);
 		const btn = document.createElement('button');
 		btn.className = 'icon-btn';
 		btn.id = iconName;
