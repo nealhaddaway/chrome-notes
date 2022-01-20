@@ -17,6 +17,7 @@ added pencil animation, spellcheck, updated keyboard info, added rate/share btn
 updated to speech icons, added ability to cancel text-to-speech
 base new window off of current window size
 minor updates to help, info, and keyboard shortcut dialogs
+code cleaning, minor aesthetic and accessibility updates
 
 ========
 Note
@@ -31,6 +32,7 @@ print button
 use new app icon
 use new promo images and screenshot in git readme
 add popper or make tooltips titles by hand
+support naming file before download? modal? checkbox in settings menu somewhere?
 
 ========
 Speech
@@ -73,13 +75,14 @@ title above textarea for note title
 search note names from side menu
 sort by date last modified
 dont show them date or allow other ways to sort
-delete note option form menu
+delete note option from menu
 with confirmation dialog
 delete all notes option
 default open most recent note?
 max notes? 1000?
 time stored in mills: new Date().getTime()
 transitions for modal, colors, menu
+optional left/right chevron icons for navigatiing between notes, display: "current / total"
 
 ========
 Colors
@@ -88,3 +91,10 @@ Colors
 #f90 orange
 #fc9 shaving
 #333 lead
+
+========
+Before Release
+========
+update version number in manifest
+delete todo.txt, then send to zip
+update version number in store listing
