@@ -38,15 +38,16 @@ p:hover {
 #rgbLogo {
 	width: 48px;
 }
-.icon {
+.icon-btn {
 	border-radius: 50%;
-	padding: 8px;
 	margin: 2px;
-	/*transition: 0.2s ease-in-out;*/
+	font-size: 0px; /* fix for button size */
 }
-.icon:hover {
+.icon-btn:hover {
 	cursor: pointer;
-	/*transform: scale(1.1);*/
+}
+.icon {
+	padding: 8px;
 }
 h3,
 p,
@@ -68,6 +69,13 @@ ul {
 	text-align: left;
 	padding-left: 20px;
 }
+button {
+	/* reset button styles */
+	border: none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
 #menuIcon {
 	left: 0;
 	text-align: left;
@@ -79,6 +87,6 @@ ul {
 #help-modal .modal-content {
 	text-align: left;
 }
-.icon.active {
+.icon-btn.active {
 	background-color: #f69;
 }

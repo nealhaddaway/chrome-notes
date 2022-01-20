@@ -30,17 +30,15 @@ window.onload = () => {
 	for (let i = 0; i < iconNames.length; i++) {
 		let icon = document.createElement('img');
 		icon.src = 'img/icon/' + iconNames[i] + '.svg';
-		icon.id = iconNames[i];
 		icon.className = 'icon';
 		icon.title =
 			iconNames[i].substring(0, 1).toUpperCase() +
 			iconNames[i].substring(1); //caps
-		icon.draggable = false;
-		icon.tabIndex = 0;
-		icon.onkeydown = (evt) => {
-			if (evt.key == 'Enter') icon.onclick();
-		};
-		iconDiv.appendChild(icon);
+		let btn = document.createElement('button');
+		btn.className = 'icon-btn';
+		btn.id = iconNames[i];
+		btn.appendChild(icon);
+		iconDiv.appendChild(btn);
 
 		if (iconNames[i] == 'spellcheck') {
 			iconDiv.appendChild(document.createElement('hr'));
