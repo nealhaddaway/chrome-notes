@@ -83,6 +83,12 @@ max notes? 1000?
 time stored in mills: new Date().getTime()
 transitions for modal, colors, menu
 optional left/right chevron icons for navigatiing between notes, display: "current / total"
+download title is note title, maybe concat with current date?
+max number of notes?
+confirmation prompt on delete and delete all btns
+save notes as array of objects which contain note value, title, created date, last edit date (dates for possible future use)
+expanded menu for quick btns for share, copy, download for each note, has caret down/caret up icon toggle
+click away to close modal/nav
 
 ========
 Colors
@@ -91,6 +97,13 @@ Colors
 #f90 orange
 #fc9 shaving
 #333 lead
+
+========
+Icons
+========
+Find icon: https://fonts.google.com/icons?selected=Material+Icons
+Change fill to "#666"
+Rename file
 
 ========
 Before Release

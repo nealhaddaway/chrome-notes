@@ -4,6 +4,7 @@ body {
 	padding: 4px;
 }
 p,
+input,
 #notes {
 	font-family: Roboto, Arial;
 }
@@ -29,6 +30,10 @@ p:hover {
 	height: 240px;
 	max-width: 480px;
 	max-height: 480px;
+}
+#notes,
+input {
+	background: transparent;
 	outline: 0px !important;
 	caret-color: #f90;
 }
@@ -48,6 +53,17 @@ p:hover {
 }
 .icon {
 	padding: 8px;
+}
+.big-btn {
+	display: block;
+	padding: 4px;
+	margin: 8px;
+	border-radius: 0;
+	font-size: 12px;
+	color: #999;
+}
+.big-btn:hover {
+	color: #fff;
 }
 h3,
 p,
@@ -76,10 +92,24 @@ button {
 	padding: 0;
 	background: transparent;
 }
-#menuIcon {
-	left: 0;
-	text-align: left;
+#menuBtn {
+	left: 4px;
 	position: absolute;
+}
+#addBtn {
+	right: 4px;
+	position: absolute;
+}
+#titleInput {
+	padding: 4px;
+	margin-bottom: 8px;
+	border-color: transparent;
+	text-align: center;
+	font-weight: bold;
+}
+#titleInput:hover,
+#titleInput:focus {
+	border-color: inherit;
 }
 .modal-content p {
 	line-height: 20px;

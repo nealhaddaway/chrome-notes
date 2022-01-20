@@ -1,5 +1,4 @@
-body,
-#notes {
+body {
 	background-color: #333;
 }
 h3 {
@@ -15,11 +14,13 @@ a {
 a:hover {
 	color: #f90;
 }
-#notes {
+#notes,
+input {
 	color: #999;
 	border: 2px solid #999;
 }
-#notes:focus {
+#notes:focus,
+input:focus {
 	color: #ccc;
 	border: 2px solid #ccc;
 }

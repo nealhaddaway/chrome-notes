@@ -164,6 +164,14 @@ window.onload = () => {
 		);
 	};
 
+	document.getElementById('menuBtn').onclick = () => {
+		document.querySelector('nav').classList.add('open');
+	};
+
+	document.getElementById('closeNavBtn').onclick = () => {
+		document.querySelector('nav').classList.remove('open');
+	};
+
 	if (localStorage) {
 		// load note
 		notes.value = localStorage.getItem('noteData');

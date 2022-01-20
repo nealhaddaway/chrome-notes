@@ -1,0 +1,50 @@
+nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	overflow-x: hidden;
+	transition: 0.25s;
+	padding-top: 8px;
+	text-align: left;
+}
+
+nav.open {
+	width: 240px;
+	max-width: 100%; /* for extra small sizes */
+	border-right: 2px solid #666;
+}
+
+nav .note-preview span {
+	padding: 4px 8px;
+	font-size: 16px;
+	color: #999;
+	cursor: default;
+	transition: 0.25s;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	display: block;
+}
+
+nav .note-preview:hover span {
+	color: #ccc;
+}
+
+.note-preview {
+	text-align: center;
+	border-bottom: 2px solid #666;
+	margin: 8px;
+}
+nav .note-preview:hover {
+	border-bottom-color: #ccc;
+}
+
+#closeNavBtn {
+	margin-left: 8px;
+}
