@@ -182,7 +182,7 @@ window.onload = () => {
 	}
 
 	document.onkeydown = (evt) => {
-		if (evt.key === 'n' && notes != document.activeElement) {
+		if (evt.key === 'n' && notes !== document.activeElement) {
 			document.getElementById('night-mode').onclick();
 			notes.blur();
 		}
